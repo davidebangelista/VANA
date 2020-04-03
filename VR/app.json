@@ -17,13 +17,13 @@
 			"type": "PerspectiveCamera",
 			"name": "Camera",
 			"layers": 1,
-			"matrix": [0.251982,0,-0.967732,0,-0.398035,0.911497,-0.103642,0,0.882084,0.411307,0.229681,0,17.760482,8.283945,4.498657,1],
+			"matrix": [0.961153,0,-0.276017,0,-0.266559,0.259537,-0.928217,0,0.071637,0.965733,0.249455,0,2.353898,30.451151,7.888409,1],
 			"fov": 50,
 			"zoom": 1,
 			"near": 0.01,
 			"far": 1000,
 			"focus": 10,
-			"aspect": 1.65124,
+			"aspect": 1.87782,
 			"filmGauge": 35,
 			"filmOffset": 0
 		}
@@ -796,7 +796,7 @@
 					"type": "Group",
 					"name": "map1.obj",
 					"layers": 1,
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,6.441199,0,-4.829922,1],
 					"children": [
 						{
 							"uuid": "E402E0E1-5884-47CE-80EB-7CEF7FC64C61",
@@ -926,21 +926,6 @@
 						}]
 				},
 				{
-					"uuid": "B721131F-63C7-4ED0-A647-F65CEC30CFFA",
-					"type": "PerspectiveCamera",
-					"name": "PerspectiveCamera",
-					"layers": 1,
-					"matrix": [0.744624,0.00541,-0.667463,0,-0.054812,0.997085,-0.053068,0,0.66523,0.076101,0.74275,0,7.002,1.539,6.816,1],
-					"fov": 50,
-					"zoom": 1,
-					"near": 0.1,
-					"far": 2000,
-					"focus": 10,
-					"aspect": 1.65124,
-					"filmGauge": 35,
-					"filmOffset": 0
-				},
-				{
 					"uuid": "B8EC3D63-93E6-4BF3-913D-86386DEEDEFC",
 					"type": "Group",
 					"name": "sheild.obj",
@@ -1020,10 +1005,10 @@
 		}
 	},
 	"scripts": {
-		"B721131F-63C7-4ED0-A647-F65CEC30CFFA": [
+		"B8EC3D63-93E6-4BF3-913D-86386DEEDEFC": [
 			{
-				"name": "Player camera",
-				"source": "function update( event ) {}\nPlayer.SetCamera(this);"
+				"name": "sheild",
+				"source": "function update( event ) {}"
 			}]
 	}
 }
