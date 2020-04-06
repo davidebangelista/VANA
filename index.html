@@ -1,57 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title></title>
-		<meta charset="utf-8">
-		<meta name="generator" content="Three.js Editor">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				font-family: sans-serif;
-				font-size: 11px;
-				background-color: #000;
-				margin: 0px;
-				overflow: hidden;
-			}
-		</style>
-	</head>
-	<body ontouchstart="">
-		<script src="./js/HelioWebXRPolyfill.js"></script>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
 
-		<script type="module">
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-			import * as THREE from './js/three.module.js';
-			import { APP } from './js/app.js';
-			import { VRButton } from './js/VRButton.js';
+.header {
+  overflow: hidden;
+   background-color: #000;
+  
+ 
+  padding: 11px 10px;
+  margin-top:auto;
+  margin-bottom:auto;
+}
 
-			window.THREE = THREE; // Used by APP Scripts.
-			window.VRButton = VRButton; // Used by APP Scripts.
+.header a {
 
-			var loader = new THREE.FileLoader();
-			loader.load( 'app.json', function ( text ) {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
 
-				var player = new APP.Player();
-				player.load( JSON.parse( text ) );
-				player.setSize( window.innerWidth, window.innerHeight );
-				player.play();
+.header img {
+width:8%;
+}
 
-				document.body.appendChild( player.dom );
+.header a:hover {
+  background-color: #fff;
+  color: red;
+}
 
-				window.addEventListener( 'resize', function () {
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
 
-					player.setSize( window.innerWidth, window.innerHeight );
+.header-right {
+  float: right;
+}
 
-				} );
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
 
-			} );
+<div class="header">
+  <img width="5%" src="https://raw.githubusercontent.com/davidebangelista/VANA/master/favicon-96x96.png" href="#default" class="logo" />
+  <div class="header-right">
+    <a class="active" href="#home">HOME</a>
+    <a class="header-right-tab" href="#about">VOX OS</a>
+    <a class="header-right-tab" href="#contact">Contact</a>
+    <a class="header-right-tab" href="#about">About</a>
+  </div>
+</div>
 
-			var button = document.createElement( 'a' );
-			button.href = 'https://threejs.org/editor/#file=' + location.href.split( '/' ).slice( 0, - 1 ).join( '/' ) + '/app.json';
-			button.style.cssText = 'position: absolute; bottom: 20px; right: 20px; padding: 10px 16px; color: #fff; border: 1px solid #fff; border-radius: 20px; text-decoration: none;';
-			button.target = '_blank';
-			button.textContent = 'EDIT';
-			document.body.appendChild( button );
+<div style="padding-left:20px">
+  <h1>Site Under Construction!</h1>
+  <p>Come Check with us later!</p>
+</div>
 
-		</script>
-	</body>
+</body>
 </html>
